@@ -9,9 +9,10 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Run flake8
+      - uses: actions/checkout@v3
+
+      - name: Flake8 tests
         run: |
           pip3 install requirements/test.txt
           flake8 –config=setup.cfg
