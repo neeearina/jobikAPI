@@ -1,0 +1,29 @@
+name: Run Django Tests
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x
+
+    - name: Install dependencies
+      run: |
+        pip3 install -r requirements/test.txt
+
+    - name: Run Django tests
+      run: |
+        cd ./jobik_api
+        python3 manage.py test
