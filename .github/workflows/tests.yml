@@ -13,4 +13,4 @@ jobs:
     steps:
       - name: Run flake8
         run: |
-          flake8 –config=setup.cfg
+          flake8 --config=setup.cfg
