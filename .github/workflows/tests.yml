@@ -13,5 +13,4 @@ jobs:
     steps:
       - name: Run flake8
         run: |
-          pip3 install requirements/test.txt
           flake8 –config=setup.cfg
