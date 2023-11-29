@@ -55,6 +55,8 @@ from django.core.management.utils import get_random_secret_key
 get_random_secret_key()
 ```
 
+### Последующие команды выполняются из директории проекта
+
 ## Выполните миграции для создания таблиц в БД:
 
 ```
@@ -64,6 +66,12 @@ python manage.py migrate
 ## Актуальная ER диаграмма со структурой БД по ссылке
 
 [ERD](https://dbdiagram.io/d/656488923be1495787ceca36)
+
+## Загрузите фикстуры в БД:
+
+```
+python manage.py loaddata fixtures/categories.json
+```
 
 ## Создайте пользователя для входа в admin-панель:
 
