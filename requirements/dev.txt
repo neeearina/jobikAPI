@@ -1,2 +1,4 @@
 -r prod.txt
 django-debug-toolbar==4.2.0
+selenium==4.15.2
+

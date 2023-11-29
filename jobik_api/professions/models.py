@@ -1,4 +1,4 @@
-import django.db
+import django.db.models
 
 __all__ = ["CategoriesModel", "ProfessionsModel"]
 
@@ -9,7 +9,19 @@ class CategoriesModel(django.db.models.Model):
         help_text="название категории профессии",
         verbose_name="категория",
     )
+    link_to_professions = django.db.models.URLField(
+        blank=True,
+        max_length=250,
+        help_text="ссылка на весь список профессий в данной категории",
+        verbose_name="ссылка",
+    )
+    num_of_professions = django.db.models.PositiveIntegerField(
+        default=0,
+        help_text="количество профессий в категории",
+        verbose_name="количество профессий",
+    )
     description = django.db.models.TextField(
+        blank=True,
         help_text="описание категории",
         verbose_name="описание",
     )

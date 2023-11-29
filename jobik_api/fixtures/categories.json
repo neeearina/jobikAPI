@@ -1,0 +1,398 @@
+[
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 110,
+    "fields": {
+      "name": "Медицина",
+      "link_to_professions": "https://www.profguide.io/professions/category/medicine/",
+      "num_of_professions": 149,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 111,
+    "fields": {
+      "name": "IT профессии",
+      "link_to_professions": "https://www.profguide.io/professions/category/it/",
+      "num_of_professions": 99,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 112,
+    "fields": {
+      "name": "Дизайн и прикладное искусство",
+      "link_to_professions": "https://www.profguide.io/professions/category/designe/",
+      "num_of_professions": 77,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 113,
+    "fields": {
+      "name": "Менеджмент (управление)",
+      "link_to_professions": "https://www.profguide.io/professions/category/managment/",
+      "num_of_professions": 75,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 114,
+    "fields": {
+      "name": "Инженерное дело",
+      "link_to_professions": "https://www.profguide.io/professions/category/ingenire/",
+      "num_of_professions": 66,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 115,
+    "fields": {
+      "name": "Искусство (музыка, театр, кино, изобразительное искусство)",
+      "link_to_professions": "https://www.profguide.io/professions/category/kino_teatr/",
+      "num_of_professions": 65,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 116,
+    "fields": {
+      "name": "Педагогика и психология",
+      "link_to_professions": "https://www.profguide.io/professions/category/pedagogy/",
+      "num_of_professions": 57,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 117,
+    "fields": {
+      "name": "Транспорт, авиация, автобизнес",
+      "link_to_professions": "https://www.profguide.io/professions/category/transport/",
+      "num_of_professions": 52,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 118,
+    "fields": {
+      "name": "Маркетинг, реклама и PR",
+      "link_to_professions": "https://www.profguide.io/professions/category/marketing/",
+      "num_of_professions": 47,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 119,
+    "fields": {
+      "name": "Наука",
+      "link_to_professions": "https://www.profguide.io/professions/category/science/",
+      "num_of_professions": 43,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 120,
+    "fields": {
+      "name": "Экономика",
+      "link_to_professions": "https://www.profguide.io/professions/category/finansi/",
+      "num_of_professions": 40,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 121,
+    "fields": {
+      "name": "СМИ, издательство, полиграфия",
+      "link_to_professions": "https://www.profguide.io/professions/category/smi/",
+      "num_of_professions": 38,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 122,
+    "fields": {
+      "name": "Юриспруденция",
+      "link_to_professions": "https://www.profguide.io/professions/category/jurist/",
+      "num_of_professions": 26,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 123,
+    "fields": {
+      "name": "Строительство и архитектура",
+      "link_to_professions": "https://www.profguide.io/professions/category/stroitelstvo/",
+      "num_of_professions": 24,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 124,
+    "fields": {
+      "name": "Сервис и туризм",
+      "link_to_professions": "https://www.profguide.io/professions/category/serice_turism/",
+      "num_of_professions": 23,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 125,
+    "fields": {
+      "name": "Мода и красота",
+      "link_to_professions": "https://www.profguide.io/professions/category/sportBeauty/",
+      "num_of_professions": 21,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 126,
+    "fields": {
+      "name": "Торговля",
+      "link_to_professions": "https://www.profguide.io/professions/category/trade/",
+      "num_of_professions": 21,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 127,
+    "fields": {
+      "name": "Спорт и фитнес",
+      "link_to_professions": "https://www.profguide.io/professions/category/professions_in_sports/",
+      "num_of_professions": 20,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 128,
+    "fields": {
+      "name": "Лёгкая промышленность",
+      "link_to_professions": "https://www.profguide.io/professions/category/lightprom/",
+      "num_of_professions": 19,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 129,
+    "fields": {
+      "name": "Кулинария, пищевая промышленность",
+      "link_to_professions": "https://www.profguide.io/professions/category/food/",
+      "num_of_professions": 18,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 130,
+    "fields": {
+      "name": "Тяжёлая промышленность",
+      "link_to_professions": "https://www.profguide.io/professions/category/heavy_industry/",
+      "num_of_professions": 17,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 131,
+    "fields": {
+      "name": "Ветеринария, работа с животными",
+      "link_to_professions": "https://www.profguide.io/professions/category/veterinar/",
+      "num_of_professions": 16,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 132,
+    "fields": {
+      "name": "Силовые структуры",
+      "link_to_professions": "https://www.profguide.io/professions/category/sil_structur/",
+      "num_of_professions": 15,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 133,
+    "fields": {
+      "name": "Геология",
+      "link_to_professions": "https://www.profguide.io/professions/category/geologia/",
+      "num_of_professions": 14,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 134,
+    "fields": {
+      "name": "Делопроизводство, секретариат",
+      "link_to_professions": "https://www.profguide.io/professions/category/sekretariat/",
+      "num_of_professions": 11,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 135,
+    "fields": {
+      "name": "Политика",
+      "link_to_professions": "https://www.profguide.io/professions/category/politika/",
+      "num_of_professions": 10,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 136,
+    "fields": {
+      "name": "Шоу-бизнес",
+      "link_to_professions": "https://www.profguide.io/professions/category/show-biz/",
+      "num_of_professions": 9,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 137,
+    "fields": {
+      "name": "Растениеводство",
+      "link_to_professions": "https://www.profguide.io/professions/category/livestockAndCrop/",
+      "num_of_professions": 8,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 138,
+    "fields": {
+      "name": "Сельское хозяйство",
+      "link_to_professions": "https://www.profguide.io/professions/category/agriculture/",
+      "num_of_professions": 8,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 139,
+    "fields": {
+      "name": "Логистика, склад, ВЭД",
+      "link_to_professions": "https://www.profguide.io/professions/category/logistika/",
+      "num_of_professions": 7,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 140,
+    "fields": {
+      "name": "Домашний персонал",
+      "link_to_professions": "https://www.profguide.io/professions/category/mlpersonal/",
+      "num_of_professions": 6,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 141,
+    "fields": {
+      "name": "Лингвистика, коммуникации",
+      "link_to_professions": "https://www.profguide.io/professions/category/lingvistika/",
+      "num_of_professions": 6,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 142,
+    "fields": {
+      "name": "Недвижимость",
+      "link_to_professions": "https://www.profguide.io/professions/category/nedvizhimost/",
+      "num_of_professions": 5,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 143,
+    "fields": {
+      "name": "Религия",
+      "link_to_professions": "https://www.profguide.io/professions/category/religion/",
+      "num_of_professions": 5,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 144,
+    "fields": {
+      "name": "Экология",
+      "link_to_professions": "https://www.profguide.io/professions/category/ecology/",
+      "num_of_professions": 3,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 145,
+    "fields": {
+      "name": "Добыча полезных ископаемых",
+      "link_to_professions": "https://www.profguide.io/professions/category/mining_and_quarrying/",
+      "num_of_professions": 2,
+      "description": "",
+      "is_published": true
+    }
+  }
+]
