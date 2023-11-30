@@ -1,7 +1,7 @@
 [
   {
     "model": "professions.categoriesmodel",
-    "pk": 110,
+    "pk": 1,
     "fields": {
       "name": "Медицина",
       "link_to_professions": "https://www.profguide.io/professions/category/medicine/",
@@ -12,7 +12,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 111,
+    "pk": 2,
     "fields": {
       "name": "IT профессии",
       "link_to_professions": "https://www.profguide.io/professions/category/it/",
@@ -23,7 +23,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 112,
+    "pk": 3,
     "fields": {
       "name": "Дизайн и прикладное искусство",
       "link_to_professions": "https://www.profguide.io/professions/category/designe/",
@@ -34,7 +34,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 113,
+    "pk": 4,
     "fields": {
       "name": "Менеджмент (управление)",
       "link_to_professions": "https://www.profguide.io/professions/category/managment/",
@@ -45,7 +45,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 114,
+    "pk": 5,
     "fields": {
       "name": "Инженерное дело",
       "link_to_professions": "https://www.profguide.io/professions/category/ingenire/",
@@ -56,7 +56,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 115,
+    "pk": 6,
     "fields": {
       "name": "Искусство (музыка, театр, кино, изобразительное искусство)",
       "link_to_professions": "https://www.profguide.io/professions/category/kino_teatr/",
@@ -67,7 +67,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 116,
+    "pk": 7,
     "fields": {
       "name": "Педагогика и психология",
       "link_to_professions": "https://www.profguide.io/professions/category/pedagogy/",
@@ -78,7 +78,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 117,
+    "pk": 8,
     "fields": {
       "name": "Транспорт, авиация, автобизнес",
       "link_to_professions": "https://www.profguide.io/professions/category/transport/",
@@ -89,7 +89,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 118,
+    "pk": 9,
     "fields": {
       "name": "Маркетинг, реклама и PR",
       "link_to_professions": "https://www.profguide.io/professions/category/marketing/",
@@ -100,7 +100,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 119,
+    "pk": 10,
     "fields": {
       "name": "Наука",
       "link_to_professions": "https://www.profguide.io/professions/category/science/",
@@ -111,7 +111,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 120,
+    "pk": 11,
     "fields": {
       "name": "Экономика",
       "link_to_professions": "https://www.profguide.io/professions/category/finansi/",
@@ -122,7 +122,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 121,
+    "pk": 12,
     "fields": {
       "name": "СМИ, издательство, полиграфия",
       "link_to_professions": "https://www.profguide.io/professions/category/smi/",
@@ -133,7 +133,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 122,
+    "pk": 13,
     "fields": {
       "name": "Юриспруденция",
       "link_to_professions": "https://www.profguide.io/professions/category/jurist/",
@@ -144,7 +144,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 123,
+    "pk": 14,
     "fields": {
       "name": "Строительство и архитектура",
       "link_to_professions": "https://www.profguide.io/professions/category/stroitelstvo/",
@@ -155,7 +155,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 124,
+    "pk": 15,
     "fields": {
       "name": "Сервис и туризм",
       "link_to_professions": "https://www.profguide.io/professions/category/serice_turism/",
@@ -166,7 +166,18 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 125,
+    "pk": 16,
+    "fields": {
+      "name": "Торговля",
+      "link_to_professions": "https://www.profguide.io/professions/category/trade/",
+      "num_of_professions": 22,
+      "description": "",
+      "is_published": true
+    }
+  },
+  {
+    "model": "professions.categoriesmodel",
+    "pk": 17,
     "fields": {
       "name": "Мода и красота",
       "link_to_professions": "https://www.profguide.io/professions/category/sportBeauty/",
@@ -177,18 +188,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 126,
-    "fields": {
-      "name": "Торговля",
-      "link_to_professions": "https://www.profguide.io/professions/category/trade/",
-      "num_of_professions": 21,
-      "description": "",
-      "is_published": true
-    }
-  },
-  {
-    "model": "professions.categoriesmodel",
-    "pk": 127,
+    "pk": 18,
     "fields": {
       "name": "Спорт и фитнес",
       "link_to_professions": "https://www.profguide.io/professions/category/professions_in_sports/",
@@ -199,7 +199,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 128,
+    "pk": 19,
     "fields": {
       "name": "Лёгкая промышленность",
       "link_to_professions": "https://www.profguide.io/professions/category/lightprom/",
@@ -210,7 +210,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 129,
+    "pk": 20,
     "fields": {
       "name": "Кулинария, пищевая промышленность",
       "link_to_professions": "https://www.profguide.io/professions/category/food/",
@@ -221,7 +221,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 130,
+    "pk": 21,
     "fields": {
       "name": "Тяжёлая промышленность",
       "link_to_professions": "https://www.profguide.io/professions/category/heavy_industry/",
@@ -232,7 +232,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 131,
+    "pk": 22,
     "fields": {
       "name": "Ветеринария, работа с животными",
       "link_to_professions": "https://www.profguide.io/professions/category/veterinar/",
@@ -243,7 +243,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 132,
+    "pk": 23,
     "fields": {
       "name": "Силовые структуры",
       "link_to_professions": "https://www.profguide.io/professions/category/sil_structur/",
@@ -254,7 +254,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 133,
+    "pk": 24,
     "fields": {
       "name": "Геология",
       "link_to_professions": "https://www.profguide.io/professions/category/geologia/",
@@ -265,7 +265,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 134,
+    "pk": 25,
     "fields": {
       "name": "Делопроизводство, секретариат",
       "link_to_professions": "https://www.profguide.io/professions/category/sekretariat/",
@@ -276,7 +276,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 135,
+    "pk": 26,
     "fields": {
       "name": "Политика",
       "link_to_professions": "https://www.profguide.io/professions/category/politika/",
@@ -287,7 +287,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 136,
+    "pk": 27,
     "fields": {
       "name": "Шоу-бизнес",
       "link_to_professions": "https://www.profguide.io/professions/category/show-biz/",
@@ -298,7 +298,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 137,
+    "pk": 28,
     "fields": {
       "name": "Растениеводство",
       "link_to_professions": "https://www.profguide.io/professions/category/livestockAndCrop/",
@@ -309,7 +309,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 138,
+    "pk": 29,
     "fields": {
       "name": "Сельское хозяйство",
       "link_to_professions": "https://www.profguide.io/professions/category/agriculture/",
@@ -320,7 +320,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 139,
+    "pk": 30,
     "fields": {
       "name": "Логистика, склад, ВЭД",
       "link_to_professions": "https://www.profguide.io/professions/category/logistika/",
@@ -331,7 +331,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 140,
+    "pk": 31,
     "fields": {
       "name": "Домашний персонал",
       "link_to_professions": "https://www.profguide.io/professions/category/mlpersonal/",
@@ -342,7 +342,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 141,
+    "pk": 32,
     "fields": {
       "name": "Лингвистика, коммуникации",
       "link_to_professions": "https://www.profguide.io/professions/category/lingvistika/",
@@ -353,7 +353,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 142,
+    "pk": 33,
     "fields": {
       "name": "Недвижимость",
       "link_to_professions": "https://www.profguide.io/professions/category/nedvizhimost/",
@@ -364,7 +364,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 143,
+    "pk": 34,
     "fields": {
       "name": "Религия",
       "link_to_professions": "https://www.profguide.io/professions/category/religion/",
@@ -375,7 +375,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 144,
+    "pk": 35,
     "fields": {
       "name": "Экология",
       "link_to_professions": "https://www.profguide.io/professions/category/ecology/",
@@ -386,7 +386,7 @@
   },
   {
     "model": "professions.categoriesmodel",
-    "pk": 145,
+    "pk": 36,
     "fields": {
       "name": "Добыча полезных ископаемых",
       "link_to_professions": "https://www.profguide.io/professions/category/mining_and_quarrying/",
