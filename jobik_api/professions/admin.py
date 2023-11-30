@@ -27,5 +27,5 @@ class ProfessionAdmin(django.contrib.admin.ModelAdmin):
         professions.models.ProfessionsModel.is_published.field.name,
     )
     list_display_links = (
-        professions.models.ProfessionsModel.category.field.name,
+        professions.models.ProfessionsModel.name.field.name,
     )
