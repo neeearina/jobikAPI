@@ -1,10 +1,12 @@
 import os
-from pathlib import Path
+import pathlib
+import sys
 
 import dotenv
 
 dotenv.load_dotenv()
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = pathlib.Path(__file__).resolve().parent.parent
+sys.path.append(os.path.join(BASE_DIR, "jobik_api"))
 
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "default_not_secret")
 

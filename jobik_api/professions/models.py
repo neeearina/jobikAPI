@@ -1,9 +1,12 @@
 import django.db.models
 
+import professions.managers
+
 __all__ = ["CategoriesModel", "ProfessionsModel"]
 
 
 class CategoriesModel(django.db.models.Model):
+    objects = professions.managers.CategoriesManager()
     name = django.db.models.CharField(
         max_length=100,
         help_text="название категории профессии",

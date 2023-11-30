@@ -62,8 +62,7 @@ class Migration(migrations.Migration):
                 (
                     "wage",
                     models.TextField(
-                        help_text="заработная плата",
-                        verbose_name="заработная плата"
+                        help_text="заработная плата", verbose_name="заработная плата"
                     ),
                 ),
                 (
