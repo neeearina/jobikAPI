@@ -7,4 +7,8 @@ urlpatterns = [
         "all/",
         professions.views.AllProfessionsView.as_view({"get": "list"}),
     ),
+    django.urls.path(
+        "published/",
+        professions.views.PublishedProfessionsView.as_view({"get": "list"}),
+    ),
 ]

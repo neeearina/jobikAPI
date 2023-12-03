@@ -10,3 +10,10 @@ class ProfessionsManager(django.db.models.Manager):
             "name",
             "category_id",
         )
+
+    def published_professions(self):
+        return self.filter(is_published=True).values(
+            "id",
+            "name",
+            "category_id",
+        )

@@ -13,3 +13,11 @@ class AllProfessionsView(rest_framework.viewsets.ReadOnlyModelViewSet):
     )
     serializer_class = professions.serializers.AllProfessionsSerializer
     pagination_class = professions.paginations.ProfessionsPagination
+
+
+class PublishedProfessionsView(rest_framework.viewsets.ReadOnlyModelViewSet):
+    queryset = (
+        professions.models.ProfessionsModel.objects.published_professions()
+    )
+    serializer_class = professions.serializers.AllProfessionsSerializer
+    pagination_class = professions.paginations.ProfessionsPagination
