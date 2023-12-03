@@ -1,15 +1,17 @@
-from django.contrib import admin
-from django.urls import path
-
-import categories.views
+import django.contrib
+import django.urls
 
 urlpatterns = [
-    path(
+    django.urls.path(
         "admin/",
-        admin.site.urls,
+        django.contrib.admin.site.urls,
     ),
-    path(
+    django.urls.path(
         "api/categories/",
-        categories.views.PublishedCategoriesView.as_view({"get": "list"}),
+        django.urls.include("categories.urls"),
+    ),
+    django.urls.path(
+        "api/professions/",
+        django.urls.include("professions.urls"),
     ),
 ]
