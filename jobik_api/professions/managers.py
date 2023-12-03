@@ -17,3 +17,11 @@ class ProfessionsManager(django.db.models.Manager):
             "name",
             "category_id",
         )
+
+    def profession_detail(self, pk):
+        return self.filter(pk=pk).values(
+            "name",
+            "description",
+            "wage",
+            "category_id",
+        )

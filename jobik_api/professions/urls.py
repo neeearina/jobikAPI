@@ -11,4 +11,8 @@ urlpatterns = [
         "published/",
         professions.views.PublishedProfessionsView.as_view({"get": "list"}),
     ),
+    django.urls.path(
+        "detail/<int:pk>/",
+        professions.views.ProfessionDetailView.as_view(),
+    ),
 ]

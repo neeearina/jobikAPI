@@ -13,3 +13,14 @@ class AllProfessionsSerializer(serializers.ModelSerializer):
             professions.models.ProfessionsModel.name.field.name,
             "category_id",
         ]
+
+
+class DetailProfessionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = professions.models.ProfessionsModel
+        fields = [
+            professions.models.ProfessionsModel.name.field.name,
+            professions.models.ProfessionsModel.description.field.name,
+            professions.models.ProfessionsModel.wage.field.name,
+            "category_id",
+        ]

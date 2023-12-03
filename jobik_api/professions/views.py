@@ -1,10 +1,14 @@
+import rest_framework.generics
 import rest_framework.viewsets
 
 import professions.models
 import professions.paginations
 import professions.serializers
 
-__all__ = []
+__all__ = [
+    "AllProfessionsView",
+    "PublishedProfessionsView",
+]
 
 
 class AllProfessionsView(rest_framework.viewsets.ReadOnlyModelViewSet):
@@ -21,3 +25,15 @@ class PublishedProfessionsView(rest_framework.viewsets.ReadOnlyModelViewSet):
     )
     serializer_class = professions.serializers.AllProfessionsSerializer
     pagination_class = professions.paginations.ProfessionsPagination
+
+
+class ProfessionDetailView(
+        rest_framework.generics.RetrieveUpdateDestroyAPIView):
+    serializer_class = professions.serializers.DetailProfessionSerializer
+
+    def get_queryset(self):
+        return (
+            professions.models.ProfessionsModel.objects.profession_detail(
+                self.kwargs["pk"],
+            )
+        )
