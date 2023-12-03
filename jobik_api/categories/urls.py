@@ -19,4 +19,9 @@ urlpatterns = [
         categories.views.AllCategoriesView.as_view({"get": "list"}),
         name="all_categories",
     ),
+    django.urls.path(
+        "create/",
+        categories.views.CreateCategoryView.as_view(),
+        name="create_category",
+    ),
 ]

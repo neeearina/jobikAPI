@@ -21,6 +21,13 @@ class AllCategoriesView(rest_framework.viewsets.ModelViewSet):
     serializer_class = categories.serializers.CategoriesSerializer
 
 
+class CreateCategoryView(rest_framework.generics.CreateAPIView):
+    queryset = (
+        categories.models.CategoriesModel.objects.all()
+    )
+    serializer_class = categories.serializers.CreateCategorySerializer
+
+
 class CategoryDetailView(rest_framework.generics.RetrieveUpdateDestroyAPIView):
     serializer_class = categories.serializers.DetailCategorySerializer
 
