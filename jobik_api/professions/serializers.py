@@ -11,4 +11,6 @@ class AllProfessionsSerializer(serializers.ModelSerializer):
         fields = [
             professions.models.ProfessionsModel.id.field.name,
             professions.models.ProfessionsModel.name.field.name,
+            # professions.models.ProfessionsModel.category.field.name,
+            "category_id",
         ]
