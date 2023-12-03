@@ -7,5 +7,11 @@ urlpatterns = [
     django.urls.path(
         "published/",
         categories.views.PublishedCategoriesView.as_view({"get": "list"}),
+        name="published",
+    ),
+    django.urls.path(
+        "detail/<int:pk>/",
+        categories.views.CategoryDetailView.as_view(),
+        name="category_detail",
     ),
 ]
