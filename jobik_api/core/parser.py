@@ -8,6 +8,7 @@ import selenium.webdriver
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "jobik_api.settings")
 django.setup()
 
+import categories.models
 import professions.models
 
 __all__ = []
@@ -24,10 +25,10 @@ class CategoryProfessionParser:
             category_container = self.browser.find_element(
                 selenium.webdriver.common.by.By.CLASS_NAME, "list-prof-cat",
             )
-            categories = category_container.find_elements(
+            categories_list = category_container.find_elements(
                 selenium.webdriver.common.by.By.TAG_NAME, "li",
             )
-            for category in categories:
+            for category in categories_list:
                 category_elements = category.find_element(
                     selenium.webdriver.common.by.By.TAG_NAME, "a",
                 )
@@ -38,7 +39,7 @@ class CategoryProfessionParser:
                         selenium.webdriver.common.by.By.TAG_NAME, "span",
                     ).text,
                 )
-                professions.models.CategoriesModel.objects.create(
+                categories.models.CategoriesModel.objects.create(
                     name=category_title,
                     link_to_professions=link,
                     num_of_professions=num_of_professions,
@@ -51,7 +52,7 @@ class CategoryProfessionParser:
 
     def create_professions_table(self):
         profession_urls = (
-            professions.models.CategoriesModel.objects.professions_urls()
+            categories.models.CategoriesModel.objects.professions_urls()
         )
         try:
             for url in profession_urls:
@@ -70,7 +71,7 @@ class CategoryProfessionParser:
                     if len(profession_info) < 3:
                         continue
                     category_object = (
-                        professions.models.CategoriesModel.objects.get(
+                        categories.models.CategoriesModel.objects.get(
                             pk=url.get("id"))
                     )
                     professions.models.ProfessionsModel.objects.create(
@@ -89,4 +90,6 @@ if __name__ == "__main__":
     django.setup()
     parser = CategoryProfessionParser()
     parser.create_category_table()
+    os.environ["PYTHONIOENCODING"] = "utf-8"
     parser.create_professions_table()
+    del os.environ["PYTHONIOENCODING"]

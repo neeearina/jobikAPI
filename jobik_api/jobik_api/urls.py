@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path
 
-import professions.views
+import categories.views
 
 urlpatterns = [
     path(
@@ -10,6 +10,6 @@ urlpatterns = [
     ),
     path(
         "api/categories/",
-        professions.views.PublishedCategoriesView.as_view({"get": "list"}),
+        categories.views.PublishedCategoriesView.as_view({"get": "list"}),
     ),
 ]
