@@ -2,11 +2,14 @@ import django.db.models
 
 import categories.models
 import core.models
+import professions.managers
 
 __all__ = ["ProfessionsModel"]
 
 
 class ProfessionsModel(core.models.AbstructModel):
+    objects = professions.managers.ProfessionsManager()
+
     wage = django.db.models.CharField(
         max_length=100,
         help_text="заработная плата",
