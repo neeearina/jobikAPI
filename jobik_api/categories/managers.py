@@ -12,6 +12,14 @@ class CategoriesManager(django.db.models.Manager):
             )
         )
 
+    def all_categories(self):
+        return (
+            self.values(
+                "id",
+                "name",
+            )
+        )
+
     def category_detail(self, pk):
         return (
             self.filter(pk=pk).values(

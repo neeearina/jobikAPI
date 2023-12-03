@@ -11,7 +11,14 @@ class PublishedCategoriesView(rest_framework.viewsets.ReadOnlyModelViewSet):
     queryset = (
         categories.models.CategoriesModel.objects.published_categories()
     )
-    serializer_class = categories.serializers.PublishedCategoriesSerializer
+    serializer_class = categories.serializers.CategoriesSerializer
+
+
+class AllCategoriesView(rest_framework.viewsets.ModelViewSet):
+    queryset = (
+        categories.models.CategoriesModel.objects.all_categories()
+    )
+    serializer_class = categories.serializers.CategoriesSerializer
 
 
 class CategoryDetailView(rest_framework.generics.RetrieveUpdateDestroyAPIView):

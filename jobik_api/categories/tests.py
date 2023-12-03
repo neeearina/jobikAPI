@@ -27,3 +27,11 @@ class CategoriesManagerTest(django.test.TestCase):
         )
         self.assertEqual(len(profession_urls), 1)
         self.assertEqual(profession_urls[0], expected)
+
+    def test_content_in_all_categories(self):
+        expected = {"id": 2, "name": "cat2"}
+        profession_urls = (
+            categories.models.CategoriesModel.objects.all_categories()
+        )
+        self.assertEqual(len(profession_urls), 2)
+        self.assertEqual(profession_urls[1], expected)
