@@ -8,7 +8,7 @@ urlpatterns = [
     django.urls.path(
         "all/",
         professions.views.AllProfessionsView.as_view({"get": "list"}),
-        name="all_professions",
+        name="all",
     ),
     django.urls.path(
         "published/",

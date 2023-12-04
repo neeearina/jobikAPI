@@ -35,21 +35,21 @@ class CategoriesManagerTest(django.test.TestCase):
             link_to_professions="some/link/",
         )
 
-    def test_content_in_published(self):
-        expected = {"id": 1, "name": "cat1"}
-        profession_urls = (
-            categories.models.CategoriesModel.objects.published()
-        )
-        self.assertEqual(profession_urls.count(), 1)
-        self.assertEqual(profession_urls[0], expected)
-
     def test_content_in_all_categories(self):
         expected = {"id": 2, "name": "cat2"}
-        profession_urls = (
+        result = (
             categories.models.CategoriesModel.objects.all_categories()
         )
-        self.assertEqual(profession_urls.count(), 2)
-        self.assertEqual(profession_urls[1], expected)
+        self.assertEqual(result.count(), 2)
+        self.assertEqual(result[1], expected)
+
+    def test_content_in_published(self):
+        expected = {"id": 1, "name": "cat1"}
+        result = (
+            categories.models.CategoriesModel.objects.published()
+        )
+        self.assertEqual(result.count(), 1)
+        self.assertEqual(result[0], expected)
 
     @parameterized.parameterized.expand([
         ["id"],
@@ -62,7 +62,7 @@ class CategoriesManagerTest(django.test.TestCase):
         self.assertNotIn(unexpected, result[0])
 
 
-class CategoriesViewTest(django.test.TestCase):
+class CategoriesViewsTest(django.test.TestCase):
     @classmethod
     def setUpTestData(cls):
         cls.category1 = categories.models.CategoriesModel.objects.create(
