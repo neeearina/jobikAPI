@@ -21,20 +21,9 @@ class AllCategoriesView(rest_framework.viewsets.ReadOnlyModelViewSet):
 
 class PublishedCategoriesView(rest_framework.viewsets.ReadOnlyModelViewSet):
     queryset = (
-        categories.models.CategoriesModel.objects.published_categories()
+        categories.models.CategoriesModel.objects.published()
     )
     serializer_class = categories.serializers.CategoriesSerializer
-
-
-class CategoryDetailView(rest_framework.generics.RetrieveUpdateDestroyAPIView):
-    serializer_class = categories.serializers.DetailCategorySerializer
-
-    def get_queryset(self):
-        return (
-            categories.models.CategoriesModel.objects.category_detail(
-                self.kwargs["pk"],
-            )
-        )
 
 
 class CreateCategoryView(rest_framework.generics.CreateAPIView):
@@ -42,3 +31,14 @@ class CreateCategoryView(rest_framework.generics.CreateAPIView):
         categories.models.CategoriesModel.objects.all()
     )
     serializer_class = categories.serializers.CreateCategorySerializer
+
+
+class CategoryDetailView(rest_framework.generics.RetrieveUpdateDestroyAPIView):
+    serializer_class = categories.serializers.DetailCategorySerializer
+
+    def get_queryset(self):
+        return (
+            categories.models.CategoriesModel.objects.detail(
+                self.kwargs["pk"],
+            )
+        )

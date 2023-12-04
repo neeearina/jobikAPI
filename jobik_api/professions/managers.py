@@ -11,14 +11,14 @@ class ProfessionsManager(django.db.models.Manager):
             "category_id",
         )
 
-    def published_professions(self):
+    def published(self):
         return self.filter(is_published=True).values(
             "id",
             "name",
             "category_id",
         )
 
-    def profession_detail(self, pk):
+    def detail(self, pk):
         return self.filter(pk=pk).values(
             "name",
             "description",

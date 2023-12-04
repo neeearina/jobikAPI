@@ -14,3 +14,6 @@ class CategoriesAdmin(django.contrib.admin.ModelAdmin):
     list_editable = (
         categories.models.CategoriesModel.is_published.field.name,
     )
+    list_display_links = (
+        categories.models.CategoriesModel.name.field.name,
+    )

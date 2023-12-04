@@ -3,7 +3,7 @@ import django.db.models
 __all__ = []
 
 
-class AbstructModel(django.db.models.Model):
+class AbstractModel(django.db.models.Model):
     name = django.db.models.CharField(
         max_length=100,
         help_text="название категории профессии",
@@ -23,6 +23,3 @@ class AbstructModel(django.db.models.Model):
     class Meta:
         verbose_name = "абстрактная модель"
         abstract = True
-
-    def __str__(self):
-        return self.name

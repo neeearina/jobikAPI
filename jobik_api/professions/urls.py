@@ -2,6 +2,8 @@ import django.urls
 
 import professions.views
 
+app_name = "professions"
+
 urlpatterns = [
     django.urls.path(
         "all/",
@@ -14,13 +16,13 @@ urlpatterns = [
         name="published",
     ),
     django.urls.path(
-        "detail/<int:pk>/",
-        professions.views.ProfessionDetailView.as_view(),
-        name="profession_detail",
-    ),
-    django.urls.path(
         "create/",
         professions.views.CreateProfessionView.as_view(),
         name="create_profession",
+    ),
+    django.urls.path(
+        "detail/<int:pk>/",
+        professions.views.ProfessionDetailView.as_view(),
+        name="profession_detail",
     ),
 ]

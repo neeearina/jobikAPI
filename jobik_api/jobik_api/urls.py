@@ -1,6 +1,8 @@
 import django.contrib
 import django.urls
 
+app_name = "jobik_api"
+
 urlpatterns = [
     django.urls.path(
         "admin/",

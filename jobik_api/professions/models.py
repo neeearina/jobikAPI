@@ -7,7 +7,7 @@ import professions.managers
 __all__ = ["ProfessionsModel"]
 
 
-class ProfessionsModel(core.models.AbstructModel):
+class ProfessionsModel(core.models.AbstractModel):
     objects = professions.managers.ProfessionsManager()
 
     wage = django.db.models.CharField(

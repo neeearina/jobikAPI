@@ -2,10 +2,14 @@ import rest_framework.serializers as serializers
 
 import professions.models
 
-__all__ = ["AllProfessionsSerializer"]
+__all__ = [
+    "ProfessionsSerializer",
+    "CreateProfessionSerializer",
+    "DetailProfessionSerializer",
+]
 
 
-class AllProfessionsSerializer(serializers.ModelSerializer):
+class ProfessionsSerializer(serializers.ModelSerializer):
     class Meta:
         model = professions.models.ProfessionsModel
         fields = [
@@ -13,6 +17,12 @@ class AllProfessionsSerializer(serializers.ModelSerializer):
             professions.models.ProfessionsModel.name.field.name,
             "category_id",
         ]
+
+
+class CreateProfessionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = professions.models.ProfessionsModel
+        fields = "__all__"
 
 
 class DetailProfessionSerializer(serializers.ModelSerializer):
@@ -24,9 +34,3 @@ class DetailProfessionSerializer(serializers.ModelSerializer):
             professions.models.ProfessionsModel.wage.field.name,
             "category_id",
         ]
-
-
-class CreateProfessionSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = professions.models.ProfessionsModel
-        fields = "__all__"

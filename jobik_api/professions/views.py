@@ -8,6 +8,8 @@ import professions.serializers
 __all__ = [
     "AllProfessionsView",
     "PublishedProfessionsView",
+    "CreateProfessionView",
+    "ProfessionDetailView",
 ]
 
 
@@ -15,7 +17,7 @@ class AllProfessionsView(rest_framework.viewsets.ReadOnlyModelViewSet):
     queryset = (
         professions.models.ProfessionsModel.objects.all_professions()
     )
-    serializer_class = professions.serializers.AllProfessionsSerializer
+    serializer_class = professions.serializers.ProfessionsSerializer
     pagination_class = professions.paginations.ProfessionsPagination
 
 
@@ -23,8 +25,15 @@ class PublishedProfessionsView(rest_framework.viewsets.ReadOnlyModelViewSet):
     queryset = (
         professions.models.ProfessionsModel.objects.published_professions()
     )
-    serializer_class = professions.serializers.AllProfessionsSerializer
+    serializer_class = professions.serializers.ProfessionsSerializer
     pagination_class = professions.paginations.ProfessionsPagination
+
+
+class CreateProfessionView(rest_framework.generics.CreateAPIView):
+    queryset = (
+        professions.models.ProfessionsModel.objects.all()
+    )
+    serializer_class = professions.serializers.CreateProfessionSerializer
 
 
 class ProfessionDetailView(generics.RetrieveUpdateDestroyAPIView):
@@ -36,10 +45,3 @@ class ProfessionDetailView(generics.RetrieveUpdateDestroyAPIView):
                 self.kwargs["pk"],
             )
         )
-
-
-class CreateProfessionView(rest_framework.generics.CreateAPIView):
-    queryset = (
-        professions.models.ProfessionsModel.objects.all()
-    )
-    serializer_class = professions.serializers.CreateProfessionSerializer

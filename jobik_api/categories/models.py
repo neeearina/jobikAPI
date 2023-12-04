@@ -6,7 +6,7 @@ import core.models
 __all__ = ["CategoriesModel"]
 
 
-class CategoriesModel(core.models.AbstructModel):
+class CategoriesModel(core.models.AbstractModel):
     objects = categories.managers.CategoriesManager()
 
     link_to_professions = django.db.models.URLField(
@@ -24,3 +24,6 @@ class CategoriesModel(core.models.AbstructModel):
     class Meta:
         verbose_name = "категория"
         verbose_name_plural = "категории"
+
+    def __str__(self):
+        return f"Категория {self.name}"
