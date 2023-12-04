@@ -24,3 +24,6 @@ class ProfessionsModel(core.models.AbstractModel):
     class Meta:
         verbose_name = "профессия"
         verbose_name_plural = "профессии"
+
+    def __str__(self):
+        return f"Профессия {self.name}"
