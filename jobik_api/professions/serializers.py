@@ -24,3 +24,9 @@ class DetailProfessionSerializer(serializers.ModelSerializer):
             professions.models.ProfessionsModel.wage.field.name,
             "category_id",
         ]
+
+
+class CreateProfessionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = professions.models.ProfessionsModel
+        fields = "__all__"
