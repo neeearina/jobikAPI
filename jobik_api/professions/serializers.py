@@ -6,6 +6,7 @@ __all__ = [
     "ProfessionsSerializer",
     "CreateProfessionSerializer",
     "DetailProfessionSerializer",
+    "ProfessionsFromCategorySerializer",
 ]
 
 
