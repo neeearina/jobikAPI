@@ -1,4 +1,3 @@
-import datetime
 import os
 import pathlib
 import sys
@@ -23,7 +22,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
-    "knox",
+    "drf_yasg",
     "rest_framework",
 
     "categories.apps.CategoriesConfig",

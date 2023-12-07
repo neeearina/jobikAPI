@@ -2,7 +2,9 @@
 
 [Презентация](https://drive.google.com/file/d/10GMOAMIXYuSoPFNZ1apVjuyzI5DdY4PG/view?usp=sharing)
 
-# Инструкция по запуску проекта
+# Инструкция по запуску API
+
+### После запуска проекта документация будет доступна по пути /swagger/
 
 ## Основные настройки проекта
 
