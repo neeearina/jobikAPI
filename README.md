@@ -1,4 +1,4 @@
-# Подробнее о мобильном приложении:
+# Подробнее о самом мобильном приложении Джобик вы можете узнать здесь:
 
 [Презентация](https://drive.google.com/file/d/10GMOAMIXYuSoPFNZ1apVjuyzI5DdY4PG/view?usp=sharing)
 
