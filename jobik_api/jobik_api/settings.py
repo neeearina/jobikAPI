@@ -1,3 +1,4 @@
+import datetime
 import os
 import pathlib
 import sys
@@ -14,14 +15,6 @@ DEBUG = os.environ.get("DJANGO_DEBUG", "false").lower() == "true"
 
 ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "*").split(",")
 
-if not DEBUG:
-    REST_FRAMEWORK = {
-        "DEFAULT_RENDERER_CLASSES":
-            [
-                "rest_framework.renderers.JSONRenderer",
-            ],
-    }
-
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -29,7 +22,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
+    "knox",
     "rest_framework",
+
     "categories.apps.CategoriesConfig",
     "core.apps.CoreConfig",
     "professions.apps.ProfessionsConfig",
@@ -103,3 +99,11 @@ USE_TZ = True
 STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+if not DEBUG:
+    REST_FRAMEWORK = {
+        "DEFAULT_RENDERER_CLASSES":
+            [
+                "rest_framework.renderers.JSONRenderer",
+            ],
+    }
