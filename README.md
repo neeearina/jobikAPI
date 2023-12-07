@@ -23,19 +23,19 @@ source venv/bin/activate
 Установить зависимости для прод режима:
 
 ```
-pip install -r requirements/prod.txt
+pip3 install -r requirements/prod.txt
 ```
 
 для дев режима (включает в себя установку продовых зависимостей):
 
 ```
-pip install -r requirements/dev.txt
+pip3 install -r requirements/dev.txt
 ```
 
 для тестов:
 
 ```
-pip install -r requirements/test.txt
+pip3 install -r requirements/test.txt
 ```
 
 ### Переменные виртуального окружения
@@ -44,9 +44,17 @@ pip install -r requirements/test.txt
 окружения по примеру файла example_env, расположенный также в корневой
 директории проекта.
 
+Значение переменной DJANGO_DEBUG в прод режиме False, в дев режиме True. От
+этого значения зависит отображение данных на страницах.
+
 ### Секретный ключ
 
-Получить данные секретного ключа для проекта можно с помощью таких команд:
+Получить данные секретного ключа для проекта можно с помощью выполнения
+следующих команд в терминале:
+
+```
+python manage.py shell
+```
 
 ```
 from django.core.management.utils import get_random_secret_key
@@ -61,7 +69,7 @@ get_random_secret_key()
 ### Выполните миграции для создания таблиц в БД:
 
 ```
-python manage.py migrate
+python3 manage.py migrate
 ```
 
 ### Актуальная ER диаграмма со структурой БД по ссылке
@@ -71,11 +79,11 @@ python manage.py migrate
 ### Загрузите фикстуры в БД:
 
 ```
-python manage.py loaddata fixtures/categories.json
+python3 manage.py loaddata fixtures/categories.json
 ```
 
 ```
-python manage.py loaddata fixtures/professions.json
+python3 manage.py loaddata fixtures/professions.json
 ```
 
 ### Создайте пользователя для входа в admin-панель:
@@ -84,13 +92,13 @@ python manage.py loaddata fixtures/professions.json
 пароль и т.д.)
 
 ```
-python manage.py createsuperuser
+python3 manage.py createsuperuser
 ```
 
 ### Запустите проект с помощью следующей команды и перейдите по ссылке в терминале:
 
 ```
-python manage.py runserver
+python3 manage.py runserver
 ```
 
 
