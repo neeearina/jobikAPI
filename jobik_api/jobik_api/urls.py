@@ -16,4 +16,8 @@ urlpatterns = [
         "api/professions/",
         django.urls.include("professions.urls"),
     ),
+    django.urls.path(
+        "api/users/",
+        django.urls.include("users.urls"),
+    ),
 ]

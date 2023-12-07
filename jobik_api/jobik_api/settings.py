@@ -1,3 +1,4 @@
+import datetime
 import os
 import pathlib
 import sys
@@ -21,10 +22,14 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
+    "knox",
     "rest_framework",
-    "core.apps.CoreConfig",
+
     "categories.apps.CategoriesConfig",
+    "core.apps.CoreConfig",
     "professions.apps.ProfessionsConfig",
+    "users.apps.UsersConfig",
 ]
 
 MIDDLEWARE = [
@@ -94,3 +99,11 @@ USE_TZ = True
 STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+if not DEBUG:
+    REST_FRAMEWORK = {
+        "DEFAULT_RENDERER_CLASSES":
+            [
+                "rest_framework.renderers.JSONRenderer",
+            ],
+    }
