@@ -1,3 +1,7 @@
+# Подробнее о мобильном приложении:
+
+[Презентация](https://drive.google.com/file/d/10GMOAMIXYuSoPFNZ1apVjuyzI5DdY4PG/view?usp=sharing)
+
 # Инструкция по запуску проекта
 
 ## Основные настройки проекта
