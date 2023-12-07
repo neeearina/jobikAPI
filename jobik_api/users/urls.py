@@ -1,3 +1,1 @@
-import django.urls
-
 urlpatterns = []

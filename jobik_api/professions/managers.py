@@ -25,3 +25,10 @@ class ProfessionsManager(django.db.models.Manager):
             "wage",
             "category_id",
         )
+
+    def from_category(self, category_id):
+        return self.filter(category_id=category_id).all().values(
+            "name",
+            "description",
+            "wage",
+        )

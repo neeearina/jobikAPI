@@ -25,4 +25,9 @@ urlpatterns = [
         professions.views.ProfessionDetailView.as_view(),
         name="profession_detail",
     ),
+    django.urls.path(
+        "category/<int:category_id>/",
+        professions.views.ProfessionsFromCategoryView.as_view({"get": "list"}),
+        name="from_category",
+    ),
 ]
