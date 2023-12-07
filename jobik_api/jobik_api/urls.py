@@ -1,6 +1,8 @@
 import django.contrib
 import django.urls
 
+import jobik_api.yasg
+
 app_name = "jobik_api"
 
 urlpatterns = [
@@ -21,3 +23,4 @@ urlpatterns = [
         django.urls.include("users.urls"),
     ),
 ]
+urlpatterns += jobik_api.yasg.urlpatterns
