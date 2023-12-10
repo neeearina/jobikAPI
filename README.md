@@ -59,7 +59,7 @@ pip3 install -r requirements/test.txt
 следующих команд в терминале:
 
 ```
-python manage.py shell
+python3 manage.py shell
 ```
 
 ```

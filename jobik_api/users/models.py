@@ -1,17 +1,16 @@
-import django.conf
+import django.contrib.auth.models
 import django.db.models
 
-__all__ = ["Profile"]
+import users.managers
+
+__all__ = ["User"]
 
 
-class Profile(django.db.models.Model):
-    user = django.db.models.OneToOneField(
-        django.conf.settings.AUTH_USER_MODEL,
-        on_delete=django.db.models.CASCADE,
-        help_text="пользователь",
-        verbose_name="пользователь",
-    )
+class User(django.contrib.auth.models.AbstractUser):
+    objects = users.managers.UserManager()
+
     birthday = django.db.models.DateField(
+        null=True,
         help_text="дата рождения пользователя",
         verbose_name="дата рождения",
         blank=True,
@@ -23,8 +22,9 @@ class Profile(django.db.models.Model):
     )
 
     class Meta:
-        verbose_name = "профиль"
-        verbose_name_plural = "профили"
+        verbose_name = "пользователь"
+        verbose_name_plural = "пользователи"
+        ordering = ["username"]
 
     def __str__(self):
-        return f"Пользователь {self.user}"
+        return f"Пользователь {self.username}"

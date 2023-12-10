@@ -2,21 +2,22 @@ import rest_framework.generics as generics
 import rest_framework.viewsets as viewsets
 
 import categories.models
+import categories.paginations
 import categories.serializers
 
 __all__ = [
     "AllCategoriesView",
     "PublishedCategoriesView",
     "CategoryDetailView",
-    "CreateCategoryView",
 ]
 
 
-class AllCategoriesView(viewsets.ReadOnlyModelViewSet):
+class AllCategoriesView(generics.ListCreateAPIView):
     queryset = (
         categories.models.CategoriesModel.objects.all_categories()
     )
     serializer_class = categories.serializers.CategoriesSerializer
+    pagination_class = categories.paginations.CategoriesPagination
 
 
 class PublishedCategoriesView(viewsets.ReadOnlyModelViewSet):
@@ -24,17 +25,12 @@ class PublishedCategoriesView(viewsets.ReadOnlyModelViewSet):
         categories.models.CategoriesModel.objects.published()
     )
     serializer_class = categories.serializers.CategoriesSerializer
-
-
-class CreateCategoryView(generics.CreateAPIView):
-    queryset = (
-        categories.models.CategoriesModel.objects.all()
-    )
-    serializer_class = categories.serializers.CreateCategorySerializer
+    pagination_class = categories.paginations.CategoriesPagination
 
 
 class CategoryDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = categories.serializers.DetailCategorySerializer
+    pagination_class = categories.paginations.CategoriesPagination
 
     def get_queryset(self):
         return (

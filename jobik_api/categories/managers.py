@@ -9,6 +9,7 @@ class CategoriesManager(django.db.models.Manager):
             self.values(
                 "id",
                 "name",
+                "is_published",
             )
         )
 
