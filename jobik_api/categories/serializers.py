@@ -19,12 +19,6 @@ class CategoriesSerializer(serializers.ModelSerializer):
         ]
 
 
-class CreateCategorySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = categories.models.CategoriesModel
-        fields = "__all__"
-
-
 class DetailCategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = categories.models.CategoriesModel
