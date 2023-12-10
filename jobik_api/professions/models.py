@@ -10,8 +10,8 @@ __all__ = ["ProfessionsModel"]
 class ProfessionsModel(core.models.AbstractModel):
     objects = professions.managers.ProfessionsManager()
 
-    wage = django.db.models.CharField(
-        max_length=100,
+    wage = django.db.models.PositiveIntegerField(
+        default=0,
         help_text="заработная плата",
         verbose_name="заработная плата",
     )
