@@ -24,6 +24,7 @@ class CategoriesModel(core.models.AbstractModel):
     class Meta:
         verbose_name = "категория"
         verbose_name_plural = "категории"
+        ordering = ["name"]
 
     def __str__(self):
         return f"Категория {self.name}"

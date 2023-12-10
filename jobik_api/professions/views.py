@@ -34,10 +34,12 @@ class CreateProfessionView(generics.CreateAPIView):
         professions.models.ProfessionsModel.objects.all()
     )
     serializer_class = professions.serializers.CreateProfessionSerializer
+    pagination_class = professions.paginations.ProfessionsPagination
 
 
 class ProfessionDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = professions.serializers.DetailProfessionSerializer
+    pagination_class = professions.paginations.ProfessionsPagination
 
     def get_queryset(self):
         return (

@@ -80,7 +80,7 @@ class CategoriesViewsTest(django.test.TestCase):
             ),
         )
         self.assertEqual(response.status_code, http.HTTPStatus.OK)
-        self.assertEqual(len(response.data), 2)
+        self.assertEqual(response.data["count"], 2)
 
     def test_published(self):
         response = self.client.get(
@@ -89,7 +89,7 @@ class CategoriesViewsTest(django.test.TestCase):
             ),
         )
         self.assertEqual(response.status_code, http.HTTPStatus.OK)
-        self.assertEqual(len(response.data), 1)
+        self.assertEqual(response.data["count"], 1)
 
     def test_create_category(self):
         num_categories_initial = (
