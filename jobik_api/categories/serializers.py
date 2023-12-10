@@ -4,7 +4,6 @@ import categories.models
 
 __all__ = [
     "CategoriesSerializer",
-    "CreateCategorySerializer",
     "DetailCategorySerializer",
 ]
 
