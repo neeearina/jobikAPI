@@ -54,7 +54,8 @@ class ProfessionManagerTest(django.test.TestCase):
 
     def test_content_in_all_professions(self):
         expected = {"category_id": 1, "id": 2,
-                    "name": "unpublished profession"}
+                    "name": "unpublished profession",
+                    "is_published": False }
         result = (
             professions.models.ProfessionsModel.objects.all_professions()
         )

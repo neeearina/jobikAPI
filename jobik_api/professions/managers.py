@@ -8,6 +8,7 @@ class ProfessionsManager(django.db.models.Manager):
         return self.values(
             "id",
             "name",
+            "is_published",
             "category_id",
         )
 
