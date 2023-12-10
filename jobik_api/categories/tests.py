@@ -36,7 +36,7 @@ class CategoriesManagerTest(django.test.TestCase):
         )
 
     def test_content_in_all_categories(self):
-        expected = {"id": 2, "name": "cat2"}
+        expected = {"id": 2, "name": "cat2", "is_published": False}
         result = (
             categories.models.CategoriesModel.objects.all_categories()
         )
@@ -97,7 +97,7 @@ class CategoriesViewsTest(django.test.TestCase):
         ).count()
         response_create_category = self.client.post(
             django.urls.reverse(
-                "categories:create_category",
+                "categories:all",
             ),
             data={"name": "unpublished category 2"},
         )

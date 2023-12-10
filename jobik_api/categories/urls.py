@@ -7,18 +7,13 @@ app_name = "categories"
 urlpatterns = [
     django.urls.path(
         "all/",
-        categories.views.AllCategoriesView.as_view({"get": "list"}),
+        categories.views.AllCategoriesView.as_view(),
         name="all",
     ),
     django.urls.path(
         "published/",
         categories.views.PublishedCategoriesView.as_view({"get": "list"}),
         name="published",
-    ),
-    django.urls.path(
-        "create/",
-        categories.views.CreateCategoryView.as_view(),
-        name="create_category",
     ),
     django.urls.path(
         "detail/<int:pk>/",
