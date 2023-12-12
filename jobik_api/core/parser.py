@@ -74,10 +74,16 @@ class CategoryProfessionParser:
                         categories.models.CategoriesModel.objects.get(
                             pk=url.get("id"))
                     )
+                    wage = (
+                        profession_info[1].text
+                        .replace("₽", "").replace(" ", "")
+                    )
+                    if not wage.isdigit():
+                        wage = 0
                     professions.models.ProfessionsModel.objects.create(
                         name=profession_info[0].text,
                         description=profession_info[2].text,
-                        wage=profession_info[1].text.replace("₽", ""),
+                        wage=wage,
                         is_published=True,
                         category=category_object,
                     )
@@ -89,7 +95,7 @@ if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "jobik_api.settings")
     django.setup()
     parser = CategoryProfessionParser()
-    parser.create_category_table()
+    # parser.create_category_table()
     os.environ["PYTHONIOENCODING"] = "utf-8"
     parser.create_professions_table()
     del os.environ["PYTHONIOENCODING"]
